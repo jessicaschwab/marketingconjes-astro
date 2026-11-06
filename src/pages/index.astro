@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
-const title = "Marketingconjes | Soluciones Digitales";
+
+const title = "Marketingconjes | Diseño Web, WordPress, Tiendas y Capacitaciones en Comodoro Rivadavia";
+const description = "Agencia de marketing digital, desarrollo en Astro y WordPress, tiendas online en Tiendanube y Empretienda, y capacitaciones profesionales en Comodoro Rivadavia.";
 ---
 
 <html lang="es">
@@ -8,30 +10,276 @@ const title = "Marketingconjes | Soluciones Digitales";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-  </head>
-  <body class="bg-neutral-50 text-neutral-900 font-sans antialiased selection:bg-neutral-900 selection:text-white">
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Cabecera Limpia -->
-    <header class="py-6 px-8 md:px-16 flex justify-between items-center border-b border-neutral-200 bg-white">
-      <h2 class="text-base font-semibold tracking-tight">Marketingconjes</h2>
-      <nav class="flex gap-6 text-sm text-neutral-600">
-        <a href="#servicios" class="hover:text-neutral-900 transition-colors">Servicios</a>
-        <a href="#contacto" class="hover:text-neutral-900 transition-colors">Contacto</a>
+    <!-- Datos estructurados de Schema.org para conectar con tu negocio local -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Marketing con Jess",
+        "image": "https://marketingconjes.ar/logo.png",
+        "@id": "https://marketingconjes.ar",
+        "url": "https://marketingconjes.ar",
+        "telephone": "+54 9 297 412-6974",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Comodoro Rivadavia",
+          "addressRegion": "Chubut",
+          "addressCountry": "AR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -45.8642,
+          "longitude": -67.4828
+        },
+        "priceRange": "$$"
+      }
+    </script>
+  </head>
+  <body class="bg-neutral-50 text-neutral-900 font-sans antialiased selection:bg-orange-500 selection:text-white relative overflow-x-hidden">
+    
+    <!-- Fondo con gradiente difuso (Efecto Glow suave) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-orange-400/20 via-blue-400/10 to-transparent blur-[120px] pointer-events-none -z-10 rounded-full"></div>
+
+    <!-- Cabecera -->
+    <header class="py-5 px-8 md:px-16 flex justify-between items-center border-b border-neutral-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="flex items-center gap-3">
+        <img src="/logo.png" alt="Marketingconjes Logo" class="w-10 h-10 object-contain rounded-full" />
+        <h2 class="text-base font-semibold tracking-tight text-neutral-900">Marketingconjes</h2>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm text-neutral-600">
+        <a href="#servicios" class="hover:text-orange-500 transition-colors">Servicios</a>
+        <a href="#capacitaciones" class="hover:text-orange-500 transition-colors">Capacitaciones</a>
+        <a href="#plan" class="hover:text-orange-500 transition-colors">Plan Despegue</a>
+        <a href="#contacto" class="hover:text-orange-500 transition-colors">Contacto</a>
       </nav>
     </header>
 
-    <!-- Sección Hero Minimalista -->
-    <main class="max-w-2xl mx-auto px-6 pt-24 pb-16 text-center">
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-6">
-        Diseño web y estrategias digitales con claridad.
+    <!-- Sección Hero -->
+    <main class="max-w-4xl mx-auto px-6 pt-28 pb-20 text-center relative">
+      <span class="text-xs font-semibold tracking-widest uppercase bg-orange-100 text-orange-600 px-3.5 py-1.5 rounded-full mb-6 inline-block">
+        Comodoro Rivadavia • Patagonia Argentina
+      </span>
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight text-neutral-900 mb-6 leading-tight">
+        Diseño web, WordPress y estrategias con claridad.
       </h1>
-      <p class="text-lg text-neutral-600 mb-10 max-w-lg mx-auto leading-relaxed">
-        Ayudamos a potenciar tu marca con desarrollos modernos, rápidos y adaptados a tus necesidades.
+      <p class="text-lg text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Creamos sitios web estratégicos, tiendas online y te formamos con herramientas prácticas para potenciar tu negocio y destacar online.
       </p>
-      <a href="#contacto" class="inline-flex items-center justify-center bg-neutral-900 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-neutral-800 transition-colors">
-        Hablemos
+      <a href="https://wa.me/5492974126974" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-md text-sm font-medium hover:bg-orange-600 transition-colors shadow-sm">
+        Agendar una consulta por WhatsApp
       </a>
     </main>
 
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="max-w-6xl mx-auto px-6 py-20 border-t border-neutral-200">
+      <div class="text-center mb-16">
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 mb-3">¿Qué podemos hacer por vos?</h2>
+        <p class="text-neutral-600 text-sm md:text-base">Soluciones digitales profesionales diseñadas para atraer clientes y hacer crecer tu marca.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-orange-200 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4">01</div>
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Desarrollo WordPress</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Creamos, optimizamos y reparamos sitios web autogestionables adaptados a las necesidades de tu empresa.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-orange-200 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4">02</div>
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Tiendas Online</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Configuración y diseño profesional en Tiendanube y Empretienda para potenciar tus ventas online.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-orange-200 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4">03</div>
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Desarrollo Web & SEO</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Sitios ultrarrápidos con Astro y Node.js, optimizados para posicionar en los buscadores de Google.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-orange-200 transition-all shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4">04</div>
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Estrategia Digital</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Planificación de contenidos, pauta publicitaria y gestión orientada a resultados reales de negocio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Plan Despegue Digital -->
+    <section id="plan" class="max-w-4xl mx-auto px-6 py-16 my-12 bg-white rounded-2xl border border-neutral-200 shadow-xs">
+      <div class="text-center mb-12">
+        <span class="text-xs font-semibold tracking-widest uppercase bg-orange-100 text-orange-700 px-3 py-1 rounded-full mb-3 inline-block">
+          Plan Mensual Destacado
+        </span>
+        <h2 class="text-3xl font-semibold tracking-tight text-neutral-900 mb-3">Plan Despegue Digital</h2>
+        <p class="text-neutral-600 max-w-xl mx-auto text-sm md:text-base">
+          Sitio web a medida, hosting y dominio .com.ar incluidos. Una solución llave en mano para despegar en internet sin complicaciones técnicas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-neutral-50 p-8 rounded-xl border border-neutral-200 mb-8">
+        <div>
+          <h3 class="text-lg font-semibold text-neutral-900 mb-4">¿Para quién es este plan?</h3>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class="flex items-start gap-2">✓ Emprendedores lanzando su negocio al mercado.</li>
+            <li class="flex items-start gap-2">✓ Profesionales independientes que buscan presencia seria.</li>
+            <li class="flex items-start gap-2">✓ Comercios locales que quieren visibilidad en Google.</li>
+            <li class="flex items-start gap-2">✓ Quienes buscan despreocuparse del hosting y dominio.</li>
+          </ul>
+        </div>
+        <div class="text-center md:text-right border-t md:border-t-0 md:border-l border-neutral-200 pt-6 md:pt-0 md:pl-8">
+          <span class="text-xs text-neutral-500 block mb-1">Inversión inicial: $350.000</span>
+          <div class="text-3xl md:text-4xl font-bold text-orange-600 mb-2">$50.000 <span class="text-sm font-normal text-neutral-500">/ mes</span></div>
+          <p class="text-xs text-neutral-500 mb-6">Incluye hosting, dominio y soporte básico.</p>
+          <a href="https://wa.me/5492974126974" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-600 transition-colors w-full md:w-auto shadow-sm">
+            Quiero el Plan Despegue
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-neutral-200 pt-8">
+        <h3 class="text-lg font-semibold text-neutral-900 mb-6 text-center">¿Cómo trabajamos juntos?</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200">
+            <span class="text-orange-600 font-bold text-sm block mb-1">01. WhatsApp</span>
+            <p class="text-xs text-neutral-600">Me contás sobre tu negocio y definimos qué querés comunicar en tu web.</p>
+          </div>
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200">
+            <span class="text-orange-600 font-bold text-sm block mb-1">02. Diseño</span>
+            <p class="text-xs text-neutral-600">Preparo el sitio a medida con tu marca y un enfoque claro para tus clientes.</p>
+          </div>
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200">
+            <span class="text-orange-600 font-bold text-sm block mb-1">03. Publicación</span>
+            <p class="text-xs text-neutral-600">Configuro el dominio, el hosting y el SSL para dejar tu web online funcionando.</p>
+          </div>
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200">
+            <span class="text-orange-600 font-bold text-sm block mb-1">04. Lanzamiento</span>
+            <p class="text-xs text-neutral-600">Abonás el armado inicial y arrancás con tu cuota mensual fija sin sorpresas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Capacitaciones -->
+    <section id="capacitaciones" class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-200 bg-orange-50/50 rounded-2xl my-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold tracking-widest uppercase bg-orange-100 text-orange-700 px-3 py-1 rounded-full mb-3 inline-block">
+          Formación Práctica
+        </span>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 mb-3">Capacitaciones para Emprendedores y Empresas</h2>
+        <p class="text-neutral-600 text-sm md:text-base max-w-xl mx-auto">Aprende de forma práctica y sin rodeos las herramientas clave para gestionar tu negocio con autonomía.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs">
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Excel Aplicado</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Organiza tus finanzas, stock y métricas de negocio de manera eficiente.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs">
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Meta & Google Ads</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Crea y optimiza tus propias campañas publicitarias para captar clientes reales.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs">
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Marketing Digital</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Estrategias claras para comunicar tu propuesta de valor en redes sociales.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs">
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">Iniciación a la Programación</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Da tus primeros pasos en el desarrollo web y la lógica de código desde cero.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs md:col-span-2">
+          <h3 class="text-base font-semibold text-neutral-900 mb-2">¿Necesitás otra herramienta o tema específico?</h3>
+          <p class="text-neutral-600 text-xs leading-relaxed">Armamos capacitaciones a medida según tus requerimientos particulares. Consultame tu idea y lo adaptamos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="max-w-4xl mx-auto px-6 py-20 border-t border-neutral-200 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 mb-4">Hablemos sobre tu próximo proyecto</h2>
+      <p class="text-neutral-600 mb-8 max-w-lg mx-auto">Ponete en contacto directo con nosotros para potenciar tu negocio en Comodoro Rivadavia y la región.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm font-medium">
+        <a href="https://wa.me/5492974126974" target="_blank" rel="noopener noreferrer" class="bg-neutral-900 text-white px-6 py-3 rounded-md hover:bg-neutral-800 transition-colors">
+          📞 WhatsApp: +54 9 297 412-6974
+        </a>
+        <a href="https://www.google.com/search?q=marketing++comodoro+rivadavia" target="_blank" rel="noopener noreferrer" class="border border-neutral-300 px-6 py-3 rounded-md hover:border-neutral-400 transition-colors text-neutral-700">
+          ⭐ Ver Reseñas en Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-8 px-8 border-t border-neutral-200 bg-white text-center text-xs text-neutral-500">
+      <p>© 2026 Marketingconjes. Todos los derechos reservados. Comodoro Rivadavia, Chubut, Argentina.</p>
+    </footer>
+<!-- Asistente de IA Flotante -->
+    <div id="gemini-chat-widget">
+        <div id="gemini-chat-header" onclick="toggleChat()">💬 Asistente IA</div>
+        <div id="gemini-chat-body" style="display: none;">
+            <div id="gemini-chat-messages">
+                <div class="msg-bot"><b>Bot:</b> ¡Hola! ¿En qué puedo ayudarte hoy?</div>
+            </div>
+            <div id="gemini-chat-input-area">
+                <input type="text" id="gemini-user-input" placeholder="Escribe tu pregunta..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendGeminiMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    #gemini-chat-widget { position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: sans-serif; }
+    #gemini-chat-header { background: #f97316; color: white; padding: 12px 18px; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    #gemini-chat-body { width: 300px; height: 400px; background: white; border: 1px solid #e5e7eb; border-radius: 8px; display: flex; flex-direction: column; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin-bottom: 10px; }
+    #gemini-chat-messages { flex: 1; padding: 10px; overflow-y: auto; font-size: 14px; display: flex; flex-direction: column; gap: 8px; }
+    #gemini-chat-input-area { display: flex; padding: 10px; border-top: 1px solid #eee; background: #f9f9f9; }
+    #gemini-user-input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; outline: none; font-size: 14px; }
+    #gemini-chat-widget button { background: #f97316; color: white; border: none; padding: 8px 12px; margin-left: 5px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    .msg-user { background: #ffedd5; padding: 6px 10px; border-radius: 6px; align-self: flex-end; max-width: 80%; word-break: break-word; color: #9a3412; font-size: 13px; }
+    .msg-bot { background: #f3f4f6; padding: 6px 10px; border-radius: 6px; align-self: flex-start; max-width: 80%; word-break: break-word; color: #1f2937; font-size: 13px; }
+    </style>
+
+    <script is:inline>
+    function toggleChat() {
+        var body = document.getElementById('gemini-chat-body');
+        body.style.display = body.style.display === 'none' ? 'flex' : 'none';
+    }
+    function handleKeyPress(e) {
+        if (e.key === 'Enter') sendGeminiMessage();
+    }
+    function sendGeminiMessage() {
+        var input = document.getElementById('gemini-user-input');
+        var message = input.value.trim();
+        if (!message) return;
+
+        var messagesDiv = document.getElementById('gemini-chat-messages');
+        messagesDiv.innerHTML += '<div class="msg-user"><b>Tú:</b> ' + escapeHtml(message) + '</div>';
+        input.value = '';
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: message })
+        })
+        .then(res => res.json())
+        .then(res => {
+            if(res.success) {
+                messagesDiv.innerHTML += '<div class="msg-bot"><b>Bot:</b> ' + escapeHtml(res.reply) + '</div>';
+            } else {
+                messagesDiv.innerHTML += '<div class="msg-bot" style="color:red;"><b>' + escapeHtml(res.message || 'Error desconocido') + '</div>';
+            }
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        })
+        .catch(err => {
+            messagesDiv.innerHTML += '<div class="msg-bot" style="color:red;"><b>Error de red al conectar.</b></div>';
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        });
+    }
+    function escapeHtml(text) {
+        var map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+        return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+    }
+    </script>
   </body>
 </html>
