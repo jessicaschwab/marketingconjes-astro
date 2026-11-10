@@ -15,7 +15,7 @@ export async function POST({ request }) {
     const url = 'https://api.groq.com/openai/v1/chat/completions';
 
     if (!apiKey) {
-      return new Response(JSON.stringify({ success: false, message: 'Error: La clave de API no está disponible en el servidor.' }), {
+      return new Response(JSON.stringify({ success: false, message: 'Error de configuración de seguridad.' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
       });
@@ -74,7 +74,7 @@ export async function POST({ request }) {
     });
 
   } catch (error) {
-    return new Response(JSON.stringify({ success: false, message: 'Error interno del servidor.' }), {
+    return new Response(JSON.stringify({ success: false, message: 'Error de conexión con el servidor.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
