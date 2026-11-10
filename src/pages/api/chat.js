@@ -11,7 +11,7 @@ export async function POST({ request }) {
     }
 
     const apiKey = process.env.GROQ_API_KEY;
-    const model = 'llama-3.1-8b-instant';
+    const model = 'openai/gpt-oss-120b';
     const url = 'https://api.groq.com/openai/v1/chat/completions';
 
     if (!apiKey) {
