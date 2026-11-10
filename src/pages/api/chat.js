@@ -10,12 +10,12 @@ export async function POST({ request }) {
       });
     }
 
-    const apiKey = import.meta.env.GROQ_API_KEY;
+    const apiKey = process.env.GROQ_API_KEY;
     const model = 'llama-3.1-8b-instant';
     const url = 'https://api.groq.com/openai/v1/chat/completions';
 
     if (!apiKey) {
-      return new Response(JSON.stringify({ success: false, message: 'Error de configuración de seguridad.' }), {
+      return new Response(JSON.stringify({ success: false, message: 'Error: La clave de API no está disponible en el servidor.' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
       });
@@ -74,7 +74,7 @@ export async function POST({ request }) {
     });
 
   } catch (error) {
-    return new Response(JSON.stringify({ success: false, message: 'Error de conexión con el servidor.' }), {
+    return new Response(JSON.stringify({ success: false, message: 'Error interno del servidor.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
