@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 const title = "Marketingconjes | Diseño Web, WordPress, Tiendas y Capacitaciones en Comodoro Rivadavia";
 const description = "Agencia de marketing digital, desarrollo en Astro y WordPress, tiendas online en Tiendanube y Empretienda, y capacitaciones profesionales en Comodoro Rivadavia.";
 ---
@@ -307,5 +307,6 @@ const description = "Agencia de marketing digital, desarrollo en Astro y WordPre
         return text.replace(/[&<>"']/g, function(m) { return map[m]; });
     }
     </script>
+    <WhatsAppButton phone="5492974126974" message="Hola Jes, quiero consultar por tus servicios de marketing." />
   </body>
 </html>
