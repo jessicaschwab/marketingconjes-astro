@@ -1,0 +1,163 @@
+---
+// src/pages/cv.astro
+---
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Schwab | IA Educativa & Programación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary: #4A7C59;
+            --primary-light: #E8F5E9;
+            --accent: #F4A261;
+            --secondary: #2A9D8F;
+            --bg-color: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text-main: #2C3E50;
+            --text-muted: #6C757D;
+            --border-radius: 16px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #E0F2FE 100%);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 2px solid #C8E6C9;
+        }
+
+        .profile-img {
+            width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+            border: 4px solid #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+
+        h1 { font-family: 'Fredoka', sans-serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 8px; }
+        .subtitle { font-size: 1.1rem; font-weight: 600; color: var(--secondary); margin-bottom: 15px; }
+        .location { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; }
+
+        .contact-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            background-color: #FFFFFF; color: var(--primary); border: 2px solid var(--primary);
+            padding: 10px 20px; border-radius: 30px; font-weight: 600; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;
+        }
+        .btn:hover { background-color: var(--primary); color: #FFFFFF; transform: translateY(-2px); }
+
+        section {
+            background: var(--card-bg); border-radius: var(--border-radius); padding: 30px;
+            margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-left: 6px solid var(--primary);
+        }
+        section h2 { font-family: 'Fredoka', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+        p { margin-bottom: 15px; }
+
+        .simulator-box { background: #F1F8F5; border: 2px dashed #A3E4D7; border-radius: 12px; padding: 20px; margin-top: 15px; }
+        .prompt-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        .prompt-btn {
+            background: #FFFFFF; border: 1px solid #B2DFDB; padding: 10px; border-radius: 8px;
+            cursor: pointer; font-weight: 500; color: var(--text-main); text-align: left; transition: all 0.2s;
+        }
+        .prompt-btn:hover, .prompt-btn.active { background: var(--secondary); color: white; border-color: var(--secondary); }
+        .prompt-output { background: #FFFFFF; padding: 15px; border-radius: 8px; border: 1px solid #E0E0E0; font-family: monospace; font-size: 0.9rem; color: #333; min-height: 80px; }
+
+        .timeline-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid #E0E0E0; }
+        .timeline-item h3 { font-size: 1.1rem; color: var(--text-main); }
+        .timeline-date { font-size: 0.85rem; color: var(--secondary); font-weight: 600; margin-bottom: 5px; }
+        
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tag { background: var(--primary-light); color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=400" alt="Jessica Schwab" class="profile-img">
+            <h1>Jessica Fernanda Schwab</h1>
+            <div class="subtitle">Profesora de Informática & Analista Programadora</div>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> Comodoro Rivadavia, Chubut, Argentina</div>
+            
+            <div class="contact-buttons">
+                <a href="mailto:schwabjessica@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/5492974189847" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://github.com/jessicaschwab" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/schwabjessicafernanda" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2><i class="fas fa-chalkboard-teacher" style="color: var(--accent);"></i> Perfil Profesional</h2>
+            <p>Profesora de Informática y Analista Programadora Universitaria con sólida trayectoria en formación tecnológica y pedagógica. Especializada en acercar la <strong>Inteligencia Artificial Generativa a docentes de nivel primario</strong> de manera práctica, amigable y bajada al aula.</p>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-robot" style="color: var(--secondary);"></i> Simulador: IA Aplicada a Primaria</h2>
+            <p>Muestra interactiva de estructuración de prompts para docentes de nivel primario:</p>
+            <div class="simulator-box">
+                <div class="prompt-options">
+                    <button class="prompt-btn active" onclick="showPrompt('ciencias')">🌱 Ciencias Naturales</button>
+                    <button class="prompt-btn" onclick="showPrompt('cuentos')">📖 Creación de Cuentos</button>
+                    <button class="prompt-btn" onclick="showPrompt('rubricas')">📊 Rúbricas de Evaluación</button>
+                </div>
+                <div class="prompt-output" id="promptText">Cargando...</div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-graduation-cap" style="color: var(--primary);"></i> Experiencia Destacada</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">Actualidad</div>
+                <h3>Capacitadora en Inteligencia Artificial para Docentes</h3>
+                <p>Diseño y dictado de talleres prácticos en el uso de Gemas de Gemini, NotebookLM y prompts pedagógicos para educadores.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2008 - Actualidad</div>
+                <h3>Profesora de Nivel Secundario en Programación e Informática</h3>
+                <p>Dictado de clases de lógica, programación (Scratch, Arduino) y Prácticas Profesionalizantes.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-code" style="color: var(--accent);"></i> Competencias Técnicas & GitHub</h2>
+            <div class="tags">
+                <span class="tag">JavaScript / Node.js</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">IA Generativa</span>
+                <span class="tag">Git & GitHub</span>
+                <span class="tag">Python (Básico)</span>
+                <span class="tag">Astro</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>Jessica Fernanda Schwab • Creado con Astro</p>
+        </footer>
+    </div>
+
+    <script is:inline>
+        const prompts = {
+            ciencias: "Prompt sugerido para Docentes: 'Actúa como un profesor experto en didáctica de nivel primario. Explícame el ciclo del agua adaptado para niños de 8 años usando una analogía divertida con una gota viajera y diseña 2 preguntas disparadoras para el aula.'",
+            cuentos: "Prompt sugerido para Docentes: 'Crea un cuento corto para alumnos de 3er grado sobre el cuidado del agua, que incluya vocabulario sencillo y un glosario de 3 palabras clave.'",
+            rubricas: "Prompt sugerido para Docentes: 'Diseña una rúbrica de evaluación formativa de 3 niveles para evaluar una maqueta escolar sobre el sistema solar en primaria.'"
+        };
+        function showPrompt(category) {
+            document.querySelectorAll('.prompt-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('promptText').innerText = prompts[category];
+        }
+        window.onload = function() {
+            document.getElementById('promptText').innerText = prompts.ciencias;
+        };
+    </script>
+</body>
+</html>
