@@ -19,16 +19,16 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
                         },
                         tech: {
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
                         }
                     },
                     fontFamily: {
@@ -45,29 +45,28 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
     <style>
         body { font-family: 'Inter', sans-serif; }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 231, 235, 0.8);
+            border: 1px solid rgba(229, 231, 235, 0.9);
+            color: #1e293b;
         }
         .dark .glass-panel {
-            background: rgba(17, 24, 39, 0.85);
-            border: 1px solid rgba(55, 65, 81, 0.5);
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+            color: #f8fafc;
         }
         .gradient-text {
-            background: linear-gradient(135deg, #4f46e5 0%, #059669 100%);
+            background: linear-gradient(135deg, #f97316 0%, #10b981 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .badge-glow {
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
-        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen">
 
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-slate-700 pointer-events-none">
-        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
         <span id="toast-message" class="text-sm font-medium">Copiado al portapapeles</span>
     </div>
 
@@ -75,7 +74,7 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
     <header class="sticky top-0 z-40 w-full glass-panel transition-all">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
             <a href="/" class="flex items-center gap-2 group">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-orange-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
                     JS
                 </div>
                 <div>
@@ -86,26 +85,26 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-                <a href="/" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Volver al Inicio</a>
-                <a href="#perfil" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Perfil</a>
-                <a href="#experiencia" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experiencia</a>
-                <a href="#simulador" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <a href="/" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Volver al Inicio</a>
+                <a href="#perfil" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Perfil</a>
+                <a href="#experiencia" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Experiencia</a>
+                <a href="#simulador" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-ping"></span>
                     Demostración Aula
                 </a>
-                <a href="#habilidades" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Habilidades & GitHub</a>
-                <a href="#contacto" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contacto</a>
+                <a href="#habilidades" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Habilidades & GitHub</a>
+                <a href="#contacto" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Contacto</a>
             </nav>
 
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 sm:gap-3">
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="p-2 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" title="Cambiar Tema">
+                <button id="theme-toggle" class="p-2 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" title="Cambiar Tema">
                     <svg id="theme-icon-dark" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     <svg id="theme-icon-light" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                 </button>
 
                 <!-- CTA Direct Contact -->
-                <a href="mailto:schwabjessica@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/20 transition-all hover:scale-[1.02]">
+                <a href="mailto:schwabjessica@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-orange-600 hover:bg-orange-700 text-white shadow-md shadow-orange-500/20 transition-all hover:scale-[1.02]">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     Postulante Docente
                 </a>
@@ -113,11 +112,11 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-16">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-12 space-y-12 sm:space-y-16 overflow-x-hidden">
 
         <!-- Hero Section -->
-        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 via-slate-900 to-emerald-950 text-white p-6 sm:p-10 lg:p-12 shadow-2xl border border-indigo-500/20">
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-950 via-slate-900 to-emerald-950 text-white p-6 sm:p-10 lg:p-12 shadow-2xl border border-orange-500/20">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
@@ -127,41 +126,41 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
                         Capacitadora Docente de Inteligencia Artificial para Primaria
                     </div>
 
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-                        Transformando la Educación Primaria mediante <span class="bg-gradient-to-r from-emerald-400 to-indigo-300 bg-clip-text text-transparent">IA & Pedagogía Práctica</span>
+                    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                        Transformando la Educación Primaria mediante <span class="bg-gradient-to-r from-emerald-400 to-orange-300 bg-clip-text text-transparent">IA & Pedagogía Práctica</span>
                     </h1>
 
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    <p class="text-slate-300 text-xs sm:text-base leading-relaxed max-w-2xl">
                         Hola, soy <strong class="text-white">Jessica Schwab</strong>. Uno el mundo técnico de la <strong>programación y desarrollo de software</strong> con más de 15 años de experiencia docente. Capacito a maestros de educación primaria para integrar la IA de forma sencilla, aligerar su carga administrativa y enriquecer el aprendizaje en el aula.
                     </p>
 
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                         <div class="p-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                            <div class="text-xl sm:text-2xl font-bold text-emerald-400">+15 Años</div>
-                            <div class="text-xs text-slate-400">Trayectoria Educativa</div>
+                            <div class="text-lg sm:text-2xl font-bold text-emerald-400">+15 Años</div>
+                            <div class="text-[11px] sm:text-xs text-slate-400">Trayectoria Educativa</div>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                            <div class="text-xl sm:text-2xl font-bold text-indigo-300">Analista Prog.</div>
-                            <div class="text-xs text-slate-400">Univ. Patagonia SJB</div>
+                            <div class="text-lg sm:text-2xl font-bold text-orange-300">Analista Prog.</div>
+                            <div class="text-[11px] sm:text-xs text-slate-400">Univ. Patagonia SJB</div>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm col-span-2 sm:col-span-1">
-                            <div class="text-xl sm:text-2xl font-bold text-amber-300">IA Generativa</div>
-                            <div class="text-xs text-slate-400">Prompt Eng. & Gemas</div>
+                            <div class="text-lg sm:text-2xl font-bold text-amber-300">IA Generativa</div>
+                            <div class="text-[11px] sm:text-xs text-slate-400">Prompt Eng. & Gemas</div>
                         </div>
                     </div>
 
                     <div class="flex flex-wrap gap-3 pt-4">
-                        <a href="mailto:schwabjessica@gmail.com?subject=Propuesta%20Clases%20Virtuales%20IA%20Docentes%20Primaria" class="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] transition-all flex items-center gap-2">
+                        <a href="mailto:schwabjessica@gmail.com?subject=Propuesta%20Clases%20Virtuales%20IA%20Docentes%20Primaria" class="px-5 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] transition-all flex items-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             Postularme para dar Clases
                         </a>
 
-                        <a href="https://github.com/jessicaschwab" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/20 hover:scale-[1.02] transition-all flex items-center gap-2">
+                        <a href="https://github.com/jessicaschwab" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs sm:text-sm border border-white/25 hover:scale-[1.02] transition-all flex items-center gap-2">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                             Repositorio GitHub
                         </a>
 
-                        <button onclick="copyToClipboard('schwabjessica@gmail.com', 'Email copiado exitosamente')" class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white font-medium text-sm border border-white/10 transition-all flex items-center gap-2" title="Copiar Email">
+                        <button onclick="copyToClipboard('schwabjessica@gmail.com', 'Email copiado exitosamente')" class="px-4 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-slate-200 hover:text-white font-medium text-xs sm:text-sm border border-white/20 transition-all flex items-center gap-2" title="Copiar Email">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                             Copiar Email
                         </button>
@@ -169,26 +168,26 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
                 </div>
 
                 <div class="md:col-span-4 flex justify-center">
-                    <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-indigo-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-                        <div class="relative p-6 bg-slate-900 rounded-3xl border border-slate-800 text-center space-y-4 max-w-xs">
-                            <div class="relative w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-emerald-500/30 p-1 bg-slate-800">
+                    <div class="relative group w-full max-w-xs">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-emerald-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative p-6 bg-slate-900 rounded-3xl border border-slate-800 text-center space-y-4">
+                            <div class="relative w-28 h-28 mx-auto rounded-full overflow-hidden ring-4 ring-orange-500/30 p-1 bg-slate-800">
                                 <img src="https://github.com/jessicaschwab.png" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/ffffff?text=Jessica+Schwab';" alt="Jessica Schwab" class="w-full h-full object-cover rounded-full">
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Jessica F. Schwab</h3>
-                                <p class="text-xs text-emerald-400 font-semibold tracking-wide uppercase mt-1">Profesora & Analista</p>
+                                <h3 class="text-lg font-bold text-white">Jessica F. Schwab</h3>
+                                <p class="text-xs text-orange-400 font-semibold tracking-wide uppercase mt-1">Profesora & Analista</p>
                                 <p class="text-xs text-slate-400 mt-2">Comodoro Rivadavia, Chubut</p>
                             </div>
                             <div class="pt-3 border-t border-slate-800 flex justify-center gap-3">
-                                <a href="https://linkedin.com/in/schwabjessicafernanda" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-colors" title="LinkedIn">
+                                <a href="https://linkedin.com/in/schwabjessicafernanda" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-orange-600 text-slate-300 hover:text-white transition-colors" title="LinkedIn">
                                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.239-2.762-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                                 </a>
                                 <a href="https://github.com/jessicaschwab" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors" title="GitHub">
                                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                                 </a>
                                 <a href="tel:2974189847" class="p-2 rounded-lg bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white transition-colors" title="Teléfono">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -200,36 +199,45 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
         <!-- Dynamic Proposal & Pedagogical Approach -->
         <section id="perfil" class="space-y-6">
             <div class="flex items-center gap-3">
-                <div class="p-2 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                <div class="p-2 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-0a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold tracking-tight">Propuesta Pedagógica para Docentes de Primaria</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Propuesta Pedagógica para Docentes de Primaria</h2>
                     <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Por qué mi perfil técnico y docente es la combinación ideal para este dictado</p>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
                 <div class="p-6 rounded-2xl glass-panel shadow-sm hover:shadow-md transition-shadow space-y-3">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">01</div>
-                    <h3 class="font-bold text-base">Empatía y Lenguaje Docente</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold">
+                        01
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-slate-100">Empatía y Lenguaje Docente</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                         Como Profesora de Informática formada en Consudec, traduzco conceptos complejos de IA a explicaciones cercanas, sin modismos crípticos de programación. Comprendo la realidad del aula primaria.
                     </p>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="p-6 rounded-2xl glass-panel shadow-sm hover:shadow-md transition-shadow space-y-3">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">02</div>
-                    <h3 class="font-bold text-base">Respaldo Técnico Real</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-700 dark:text-orange-300 flex items-center justify-center font-bold">
+                        02
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-slate-100">Respaldo Técnico Real</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                         Mi título de Analista Programadora y experiencia en Java Backend, Node.js y Python garantizan un entendimiento profundo del funcionamiento interno de los modelos de IA y sus limitaciones.
                     </p>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="p-6 rounded-2xl glass-panel shadow-sm hover:shadow-md transition-shadow space-y-3">
-                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">03</div>
-                    <h3 class="font-bold text-base">Enfoque 100% Aplicado</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-700 dark:text-amber-300 flex items-center justify-center font-bold">
+                        03
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-slate-100">Enfoque 100% Aplicado</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                         Clases virtuales dinámicas enfocadas en resultados: creación de rúbricas rápidas, adaptaciones curriculares para necesidades diversas y gemas/asistentes contextuales para materias de primaria.
                     </p>
                 </div>
@@ -241,7 +249,7 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
                 <div>
                     <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Demostración Interactiva de Clases</span>
-                    <h2 class="text-2xl font-bold mt-1">Generador de Prompts Didácticos para Primaria</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold mt-1">Generador de Prompts Didácticos para Primaria</h2>
                     <p class="text-xs sm:text-sm text-slate-400">Ejemplo de la metodología práctica que enseño a los docentes en mis talleres</p>
                 </div>
                 <div class="px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium self-start sm:self-auto">
@@ -249,11 +257,13 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
                 </div>
             </div>
 
+            <!-- Simulator UI -->
             <div class="grid md:grid-cols-12 gap-6">
+                <!-- Controls -->
                 <div class="md:col-span-5 space-y-4">
                     <div>
                         <label class="block text-xs font-medium text-slate-300 mb-1.5">Materia / Área Primaria</label>
-                        <select id="sim-materia" onchange="updatePromptSim()" class="w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+                        <select id="sim-materia" onchange="updatePromptSim()" class="w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-orange-500">
                             <option value="ciencias">Ciencias Naturales (4° a 6° grado)</option>
                             <option value="lengua">Lengua y Literatura (1° a 3° grado)</option>
                             <option value="matematica">Matemática Didáctica (5° grado)</option>
@@ -263,7 +273,7 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
 
                     <div>
                         <label class="block text-xs font-medium text-slate-300 mb-1.5">Objetivo Pedagógico</label>
-                        <select id="sim-objetivo" onchange="updatePromptSim()" class="w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+                        <select id="sim-objetivo" onchange="updatePromptSim()" class="w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-orange-500">
                             <option value="cuento">Cuento interactivo adaptado</option>
                             <option value="rubrica">Rúbrica de evaluación rápida</option>
                             <option value="actividad">Juego de preguntas tipo trivia</option>
@@ -277,18 +287,20 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
                     </div>
                 </div>
 
+                <!-- Result Box -->
                 <div class="md:col-span-7 flex flex-col justify-between bg-slate-950 p-4 rounded-2xl border border-slate-800">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800 pb-2">
                             <span class="font-mono text-emerald-400">Prompt Estructurado Generado:</span>
-                            <span class="bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded text-[10px]">NotebookLM / Gemini Ready</span>
+                            <span class="bg-orange-950 text-orange-300 px-2 py-0.5 rounded text-[10px]">NotebookLM / Gemini Ready</span>
                         </div>
-                        <div id="sim-output" class="font-mono text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-line p-2 min-h-[160px]">
+                        <div id="sim-output" class="font-mono text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-line p-2 min-h-[160px] overflow-x-auto">
+                            <!-- JavaScript populates this -->
                         </div>
                     </div>
 
                     <div class="pt-3 border-t border-slate-800 flex justify-end">
-                        <button onclick="copyToClipboard(document.getElementById('sim-output').innerText, 'Prompt copiado para usar en IA')" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs transition-all flex items-center gap-2">
+                        <button onclick="copyToClipboard(document.getElementById('sim-output').innerText, 'Prompt copiado para usar en IA')" class="px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-medium text-xs transition-all flex items-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                             Copiar Prompt de Ejemplo
                         </button>
@@ -301,55 +313,59 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
         <section id="experiencia" class="space-y-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <h2 class="text-2xl font-bold tracking-tight">Experiencia & Capacitaciones</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Experiencia & Capacitaciones</h2>
                     <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Recorrido profesional combinando docencia y desarrollo técnico</p>
                 </div>
             </div>
 
             <div class="space-y-4">
+                <!-- Item 1 -->
                 <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-emerald-500 shadow-sm transition-all hover:translate-x-1">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white">Capacitadora en IA Generativa para Docentes</h3>
-                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold self-start sm:self-auto">Actualidad</span>
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-semibold self-start sm:self-auto">Actualidad</span>
                     </div>
-                    <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mb-3">Diseño y dictado de talleres teórico-prácticos</p>
-                    <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside">
+                    <p class="text-xs text-orange-600 dark:text-orange-400 font-medium mb-3">Diseño y dictado de talleres teórico-prácticos</p>
+                    <ul class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2 list-disc list-inside">
                         <li>Instrucción directa en el uso de <strong>Gemas de Gemini</strong> y <strong>NotebookLM</strong> para curaduría de contenidos y análisis de fuentes pedagógicas.</li>
                         <li>Desarrollo de metodologías de <em>Prompt Engineering</em> orientadas a la elaboración de unidades didácticas y adecuación curricular.</li>
                         <li>Capacitación en automatizaciones para la gestión del trabajo administrativo docente.</li>
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-indigo-500 shadow-sm transition-all hover:translate-x-1">
+                <!-- Item 2 -->
+                <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-orange-500 shadow-sm transition-all hover:translate-x-1">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white">Profesora de Nivel Secundario en Programación</h3>
-                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold self-start sm:self-auto">Ene 2008 – Actualidad</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">Ene 2008 – Actualidad</span>
                     </div>
-                    <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mb-3">Escuela Secundaria / Encargada de Prácticas Profesionalizantes</p>
-                    <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside">
+                    <p class="text-xs text-orange-600 dark:text-orange-400 font-medium mb-3">Escuela Secundaria / Encargada de Prácticas Profesionalizantes</p>
+                    <ul class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2 list-disc list-inside">
                         <li>Enseñanza de lógica de programación, Scratch, Arduino y desarrollo estructurado.</li>
                         <li>Tutoría y seguimiento personalizado de alumnos en proyectos tecnológicos aplicados.</li>
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-purple-500 shadow-sm transition-all hover:translate-x-1">
+                <!-- Item 3 -->
+                <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-amber-500 shadow-sm transition-all hover:translate-x-1">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white">Desarrolladora Web & Automatización con IA</h3>
-                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold self-start sm:self-auto">Ene 2020 – Actualidad</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">Ene 2020 – Actualidad</span>
                     </div>
-                    <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mb-3">Consultoría Digital & Proyectos Independientes (Marketingconjes.ar)</p>
-                    <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside">
+                    <p class="text-xs text-orange-600 dark:text-orange-400 font-medium mb-3">Consultoría Digital & Proyectos Independientes (Marketingconjes.ar)</p>
+                    <ul class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2 list-disc list-inside">
                         <li>Desarrollo de sitios web con Node.js, Astro y WordPress, integrando agentes inteligentes de atención.</li>
                         <li>Gestión de campañas digitales y análisis de datos en Google Analytics y Meta Ads.</li>
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-amber-500 shadow-sm transition-all hover:translate-x-1">
+                <!-- Item 4 -->
+                <div class="p-6 rounded-2xl glass-panel border-l-4 border-l-purple-500 shadow-sm transition-all hover:translate-x-1">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white">Docente de Informática Aplicada en Educación Superior</h3>
-                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold self-start sm:self-auto">ISET N° 812 / Escuela N° 1810</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start sm:self-auto">ISET N° 812 / Escuela N° 1810</span>
                     </div>
-                    <p class="text-xs text-slate-600 dark:text-slate-300">Dictado de módulos de informática técnica adaptada a Logística, Calidad e Industria.</p>
+                    <p class="text-xs text-slate-700 dark:text-slate-300">Dictado de módulos de informática técnica adaptada a Logística, Calidad e Industria.</p>
                 </div>
             </div>
         </section>
@@ -358,7 +374,7 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
         <section id="habilidades" class="space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                    <h2 class="text-2xl font-bold tracking-tight">Competencias Técnicas & Repositorio</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Competencias Técnicas & Repositorio</h2>
                     <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">El respaldo de código detrás de mis contenidos didácticos</p>
                 </div>
                 <a href="https://github.com/jessicaschwab" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-semibold hover:opacity-90 transition-opacity self-start sm:self-auto">
@@ -367,62 +383,64 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
                 </a>
             </div>
 
+            <!-- Skills Grid -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="p-4 rounded-2xl glass-panel space-y-2">
-                    <span class="text-xs font-bold text-emerald-500 uppercase">Inteligencia Artificial</span>
-                    <h4 class="font-bold text-sm">Herramientas & Prompts</h4>
+                    <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase">Inteligencia Artificial</span>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Herramientas & Prompts</h4>
                     <div class="flex flex-wrap gap-1.5 pt-1">
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Gemini Gemas</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">NotebookLM</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Prompt Engineering</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Agentes IA</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Gemini Gemas</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">NotebookLM</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Prompt Engineering</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Agentes IA</span>
                     </div>
                 </div>
 
                 <div class="p-4 rounded-2xl glass-panel space-y-2">
-                    <span class="text-xs font-bold text-indigo-500 uppercase">Desarrollo Web</span>
-                    <h4 class="font-bold text-sm">Lenguajes & Frameworks</h4>
+                    <span class="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase">Desarrollo Web</span>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Lenguajes & Frameworks</h4>
                     <div class="flex flex-wrap gap-1.5 pt-1">
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Node.js</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Java (Spring)</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Python (Básico)</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Astro</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">HTML5/CSS</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Node.js</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Java (Spring)</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Python (Básico)</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Astro</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">HTML5/CSS</span>
                     </div>
                 </div>
 
                 <div class="p-4 rounded-2xl glass-panel space-y-2">
-                    <span class="text-xs font-bold text-purple-500 uppercase">Robótica & Aula</span>
-                    <h4 class="font-bold text-sm">Tecnología Educativa</h4>
+                    <span class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase">Robótica & Aula</span>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Tecnología Educativa</h4>
                     <div class="flex flex-wrap gap-1.5 pt-1">
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Scratch</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Arduino</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Aulas Virtuales</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Figma</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Scratch</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Arduino</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Aulas Virtuales</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Figma</span>
                     </div>
                 </div>
 
                 <div class="p-4 rounded-2xl glass-panel space-y-2">
-                    <span class="text-xs font-bold text-amber-500 uppercase">Bases de Datos & Herramientas</span>
-                    <h4 class="font-bold text-sm">Backend & Gestión</h4>
+                    <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">Bases de Datos</span>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-slate-100">Backend & Gestión</h4>
                     <div class="flex flex-wrap gap-1.5 pt-1">
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">SQL / MySQL</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">MongoDB</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Git / GitHub</span>
-                        <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px]">Power BI</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">SQL / MySQL</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">MongoDB</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Git / GitHub</span>
+                        <span class="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-[11px] text-slate-800 dark:text-slate-200">Power BI</span>
                     </div>
                 </div>
             </div>
 
-            <div class="p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-indigo-950 text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-indigo-500/30">
+            <!-- GitHub Highlight Banner -->
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-orange-950 text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-orange-500/30">
                 <div class="space-y-1 text-center md:text-left">
                     <div class="flex items-center justify-center md:justify-start gap-2">
-                        <svg class="w-5 h-5 text-indigo-400 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <svg class="w-5 h-5 text-orange-400 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                         <h3 class="font-bold text-lg">Explorá mi GitHub</h3>
                     </div>
                     <p class="text-xs text-slate-300">Podés revisar repositorios con desarrollo de software, componentes y proyectos web aplicados.</p>
                 </div>
-                <a href="https://github.com/jessicaschwab" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all whitespace-nowrap shadow-lg shadow-emerald-500/20">
+                <a href="https://github.com/jessicaschwab" target="_blank" class="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-xs transition-all whitespace-nowrap shadow-lg shadow-orange-500/20">
                     Ir a github.com/jessicaschwab →
                 </a>
             </div>
@@ -430,50 +448,50 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
 
         <!-- Academic Background -->
         <section class="space-y-6">
-            <h2 class="text-2xl font-bold tracking-tight">Formación Académica</h2>
+            <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Formación Académica</h2>
 
             <div class="grid sm:grid-cols-3 gap-4">
                 <div class="p-5 rounded-2xl glass-panel space-y-2">
                     <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Título Superior Docente</span>
-                    <h3 class="font-bold text-base">Profesora de Informática</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Instituto Superior del Profesorado Consudec (Provincia de Buenos Aires)</p>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-slate-100">Profesora de Informática</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Instituto Superior del Profesorado Consudec (Provincia de Buenos Aires)</p>
                 </div>
 
                 <div class="p-5 rounded-2xl glass-panel space-y-2">
-                    <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">Título Universitario</span>
-                    <h3 class="font-bold text-base">Analista Programadora Universitaria</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Universidad Nacional de la Patagonia San Juan Bosco (CR Chubut)</p>
+                    <span class="text-xs font-semibold text-orange-600 dark:text-orange-400">Título Universitario</span>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-slate-100">Analista Programadora Universitaria</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Universidad Nacional de la Patagonia San Juan Bosco (CR Chubut)</p>
                 </div>
 
                 <div class="p-5 rounded-2xl glass-panel space-y-2">
                     <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">Especialización Técnica</span>
-                    <h3 class="font-bold text-base">Backend en Java (Junior)</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Ada ITW — SpringBoot, Maven, REST APIs, SQL/NoSQL</p>
+                    <h3 class="font-bold text-base text-slate-900 dark:text-slate-100">Backend en Java (Junior)</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Ada ITW — SpringBoot, Maven, REST APIs, SQL/NoSQL</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact & Direct Action Section -->
-        <section id="contacto" class="p-8 sm:p-10 rounded-3xl bg-gradient-to-tr from-indigo-600 to-emerald-600 text-white text-center space-y-6 shadow-2xl">
+        <section id="contacto" class="p-6 sm:p-10 rounded-3xl bg-gradient-to-tr from-orange-600 to-emerald-600 text-white text-center space-y-6 shadow-2xl">
             <div class="max-w-2xl mx-auto space-y-3">
-                <h2 class="text-3xl font-extrabold">¿Coordinamos una Entrevista o Clase de Prueba?</h2>
-                <p class="text-slate-100 text-sm leading-relaxed">
+                <h2 class="text-2xl sm:text-3xl font-extrabold">¿Coordinamos una Entrevista o Clase de Prueba?</h2>
+                <p class="text-slate-100 text-xs sm:text-sm leading-relaxed">
                     Estoy disponible para dictar módulos virtuales de Inteligencia Artificial orientados a maestros de educación primaria, adaptándome a la plataforma y horarios requeridos.
                 </p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-4 pt-2">
-                <a href="mailto:schwabjessica@gmail.com?subject=Postulacion%20Docente%20IA%20Primaria" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-xl transition-all flex items-center gap-2">
+                <a href="mailto:schwabjessica@gmail.com?subject=Postulacion%20Docente%20IA%20Primaria" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xl transition-all flex items-center gap-2">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     Enviar Correo Electrónico
                 </a>
-                <a href="https://wa.me/5492974189847?text=Hola%20Jessica,%20te%20contacto%20por%20la%20postulaci%C3%B3n%20de%20clases%20virtuales%20de%20IA" target="_blank" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-xl transition-all flex items-center gap-2">
+                <a href="https://wa.me/5492974189847?text=Hola%20Jessica,%20te%20contacto%20por%20la%20postulaci%C3%B3n%20de%20clases%20virtuales%20de%20IA" target="_blank" class="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm shadow-xl transition-all flex items-center gap-2">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                     WhatsApp Directo
                 </a>
             </div>
 
-            <div class="pt-4 text-xs text-indigo-100">
+            <div class="pt-4 text-xs text-orange-100">
                 Ubicación: Comodoro Rivadavia, Chubut | Modalidad: 100% Virtual / Remota
             </div>
         </section>
@@ -486,7 +504,7 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
         <p>CV Interactivo & Tarjeta Digital para Postulación de Clases de IA</p>
     </footer>
 
-    <!-- JavaScript Interactions with is:inline for Astro -->
+    <!-- JavaScript Interactions -->
     <script is:inline>
         // Dark Mode Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
@@ -630,7 +648,6 @@ const description = "CV interactivo de Jessica Schwab, Especialista en IA Educat
             }
         }
 
-        // Initialize default prompt simulation on load
         window.onload = function() {
             updatePromptSim();
         }
